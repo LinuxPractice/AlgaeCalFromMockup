@@ -39,7 +39,7 @@ body {
 .circle-76px {
 	width: 70px;
 	height: 70px;
-	right:-35px;
+	right:-15px;
 	top:-45px;
 }
 
@@ -80,7 +80,8 @@ body {
 	outline: none;
 	text-align: left;
 	font-size: 1.4em;
-		cursor:pointer;
+	cursor:pointer;
+	margin-left:30px;
 }
 
 .cart-button-large>span {
@@ -100,11 +101,11 @@ body {
 .product-box {
 		margin:20px;
 	padding: 10px;
-	border: 10px solid transparent;
+
 }
 
 .product-box-bordered-blue {
-		margin:20px;
+		margin:10px;
 	padding: 10px;
 	border: 10px solid rgb(21, 130, 154);
 }
@@ -179,4 +180,9 @@ nav>a{
 
 .video-box{
 
+}
+
+.form{
+	overflow:hidden;
+	
 }
