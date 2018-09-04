@@ -118,6 +118,10 @@ body {
 .text-blue {
 	color: rgb(21, 130, 154);
 }
+.text-orange{
+	color: rgb(227, 113, 36);
+	
+}
 
 .product-box-bordered-green {
 	padding: 20px;
