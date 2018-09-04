@@ -1,0 +1,21 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+	font-family: Glober;
+	src: url("../../../../fonts/glober/Glober SemiBold Free.otf") format("opentype");
+}
+
+$blue:    rgb(21, 130, 154) ;
+$orange:  rgb(227, 113, 36);
+$green:    rgb(66, 120, 57);
+$teal:    rgb(80, 177, 198);
+
+
+$font-family-base:  Glober, Roboto;

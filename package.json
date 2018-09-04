@@ -1,0 +1,33 @@
+{
+  "name": "algaecal",
+  "version": "1.0.0",
+  "description": "Test of mobile page from AlgaeCal mockup",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bill Platt",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinuxPractice/AlgaeCalFromMockup.git"
+  },
+  "keywords": [
+    "AlgaeCal",
+    "mockup",
+    "mobile",
+    "test"
+  ],
+  "bugs": {
+    "url": "https://github.com/LinuxPractice/AlgaeCalFromMockup/issues"
+  },
+  "homepage": "https://github.com/LinuxPractice/AlgaeCalFromMockup#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.1",
+    "postcss-assets": "^5.0.0"
+  }
+}
