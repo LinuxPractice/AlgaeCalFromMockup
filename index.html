@@ -507,14 +507,14 @@
 				/* video is null */
 				video.hasData(function(){
 					video.bind("secondchange", function() {
-						if (video.secondsWatched() >= 130) {
+						if (video.secondsWatched() >= 133) {
 							$('#product-bundles').removeClass('d-none');
 							//$('#product-bundles').addClass('d-block');
 							return video.unbind;
 						}
 					});					
 					video.bind("timechange", function(t) {
-						if (t >= 130) {
+						if (t >= 133) {
 							$('#product-bundles').removeClass('d-none');
 							//$('#product-bundles').addClass('d-block');
 							return video.unbind;
