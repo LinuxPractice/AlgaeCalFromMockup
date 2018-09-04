@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+	font-family: Glober;
+	src: url("../fonts/glober/Glober SemiBold Free.otf") format("opentype");
+}
+
+body {
+	font-family: Impact Glober Roboto;
+}
+
+.click-to-call {
+	color: rgb(80, 177, 198);
+}
+
+.green-phone-icon{
+	height:21px;	
+}
+
+
+.green-phone-icon::before{
+	 vertical-align:middle;
+	content:url("../images/phone icon.png");
+		line-height:21px;
+	 vertical-align:top;
+
+}
+
+.green-back {
+	background: url("../images/green.png") no-repeat green;
+	color: white;
+}
+
+.orange-back {
+	background: rgb(227, 113, 36);
+	color: white;
+}
+
+.circle-76px {
+	width: 76px;
+	height: 76px;
+	right:-25px;
+	top:-45px;
+}
+
+.cart-button {
+	background: url("../images/button.png") no-repeat center white;
+	color: white;
+	width: 275px;
+	height: 76px;
+	line-height: 76px;
+	border: none;
+	outline: none;
+	text-align: left;
+	font-size: 1.2em;
+	cursor:pointer;
+}
+
+.cart-button>span {
+	margin-left: 10px;
+}
+
+.cart-button>span::after {
+	content: "\25BA";
+}
+
+.seal-small {
+	display: block;
+	width: 76;
+	height: 76;
+}
+
+.cart-button-large {
+	background: url("../images/button.png") no-repeat center white;
+	color: white;
+	width: 310px;
+	height: 102px;
+	line-height: 102px;
+	border: none;
+	outline: none;
+	text-align: left;
+	font-size: 1.4em;
+		cursor:pointer;
+}
+
+.cart-button-large>span {
+	margin-left: 10px;
+}
+
+.cart-button-large>span::after {
+	content: "\25BA";
+}
+
+.seal-large {
+	display: block;
+	width: 102;
+	height: 102;
+}
+
+.product-box {
+		margin:20px;
+	padding: 10px;
+	border: 10px solid transparent;
+}
+
+.product-box-bordered-blue {
+		margin:20px;
+	padding: 10px;
+	border: 10px solid rgb(21, 130, 154);
+}
+
+.bg-blue{
+	background-color: rgb(21, 130, 154);
+	color:white;
+	
+}
+
+.text-blue {
+	color: rgb(21, 130, 154);
+}
+
+.product-box-bordered-green {
+	padding: 20px;
+	border: 10px solid rgb(66, 120, 57);
+}
+
+.bg-green {
+	padding: 5px;
+	background-color: rgb(66, 120, 57);
+	color: white;
+}
+
+.thick {
+	border-top: 10px solid black;
+}
+
+.thick-top-bottom {
+	border-top: 10px solid black;
+	border-bottom: 10px solid black;
+}
+
+.nutrition-table {
+	border: 3px solid black;
+	padding: 155px;
+}
+
+.thin {
+	border-top: 5px solid black;
+}
+
+.yellow-underline {
+	
+	background: url("../images/highliht.png") no-repeat;
+	
+}
+
+.red-underline {
+	background: url('../images/Layer 11.png') no-repeat;
+	background-position: 0 30px;
+}
+
+.price-container {
+  display: table;
+  height: 50px;
+  text-align: center;
+}
+.price-container>span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+nav>a{
+	color:rgb(110,109,109);	
+}
+
+.video-box{
+
+}
