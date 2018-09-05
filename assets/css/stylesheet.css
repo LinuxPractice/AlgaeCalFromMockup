@@ -3,6 +3,10 @@
   font-family: Glober;
   src: url("../../../../fonts/glober/Glober SemiBold Free.otf") format("opentype"); }
 
+@media only screen and (min-width: 640px) {
+  section {
+    width: 100%; } }
+
 .click-to-call {
   color: #50b1c6; }
 
@@ -16,8 +20,11 @@
   vertical-align: top; }
 
 .green-back {
-  background: url("../images/green.png") no-repeat green;
+  background: url("../images/green.png") repeat green;
   color: white; }
+
+.green-back h1::after, .green-back h1::before {
+  content: "\00a0 \2501 \2501 \00a0"; }
 
 .orange-back {
   background: #e37124;
@@ -97,7 +104,11 @@
 
 .product-box-bordered-green {
   padding: 20px;
-  border: 10px solid #427839; }
+  background: url("../images/green.png") repeat green; }
+
+section.product-box-bordered-green div {
+  background: #FFFFFF;
+  padding: 20px; }
 
 .bg-green {
   padding: 5px;
@@ -105,26 +116,30 @@
   color: white; }
 
 .thick {
-  border-top: 10px solid black; }
+  border-top: 10px solid #000000; }
 
 .thick-top-bottom {
-  border-top: 10px solid black;
-  border-bottom: 10px solid black; }
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid #000000; }
 
 .nutrition-table {
-  border: 3px solid black;
+  border: 3px solid #000000;
   padding: 155px; }
 
 .thin {
-  border-top: 5px solid black; }
+  border-top: 5px solid #000000; }
 
 .yellow-underline {
   background: url("../images/highliht.png") no-repeat;
   padding-left: 10px; }
 
-.red-underline {
-  background: url("../images/Layer 11.png") no-repeat;
+.red-underline1 {
+  background: url("../images/redunderline1.png") no-repeat;
   background-position: 0 30px; }
+
+.red-underline2 {
+  background: url("../images/redunderline2.png") no-repeat;
+  background-position: 0 25px; }
 
 .price-container {
   display: table;

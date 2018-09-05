@@ -26,39 +26,34 @@
 				<div class="font-weight-bold h6">Tap to Talk <a href="" class="click-to-call">1-408-555-5555</a> 
 				</div>
 				
-				<div class="font-weight-bold green-phone-icon h6">&nbsp;Speak to our Bone Health Specialists!
+				<div class="font-weight-bold green-phone-icon h6 speak-bone-specialist d-none">&nbsp;Speak to our Bone Health Specialists!
 				</div>
 			</nav>
 		</div>
 	</header>
 	<div class="container ">
 		<article>
-			<section class="row">
-				<section class="green-back p-3 col-md-6 col-sm-12"
-					style="max-width: 480px;">
-					<div class="row m-0 ">
-						<div class="col-2 m-0 pl-2 pr-2">
-							<hr class="" style="color: white; border-top: 2px solid white;">
+			<section >
+				<section class="green-back">
+					<div class="p-3 mx-auto" style="max-width:480px;">
+						<div>
+							<h1 class="h2 text-center">INTRODUCING</h1>
 						</div>
-						<div class="col-8 h3 p-0 m-0 text-center">INTRODUCING</div>
-						<div class="col-2 m-0 pl-2 pr-2">
-							<hr class="" style="color: white; border-top: 2px solid white;">
+						<div class="h2">
+							The ONLY Calcium Supplement that <br>
+							<div class="red-underline1">
+							
+								INCREASES BONE </div><div class="red-underline2"> DENSITY*
+							</div>
+							<br> ...or Your Money Back
 						</div>
-					</div>
-
-					<div class="h2 m-0 p-0 pl-3 p-r">
-						The ONLY Calcium Supplement that <br>
-						<div class="d-inline red-underline">
-							Increases Bone <br> Density*
-						</div>
-						<br> ...or Your Money Back
 					</div>
 				</section>
 
-				<section class="col-md-6 col-sm-12">
-					<div class="h3">
-						Build <b>brand new bone</b> WITHIN 6 MONTHS with this rare algae
-						calcium <br> even if you're 85! <br>
+				<section >
+					<div class="p-3 h3">
+						Build <b>brand new bone</b> WITHIN 6 MONTHS with this <b>rare algae</b>
+						calcium  even if you're 85! <br>
 						<!-- Must use http:// to load from a local html file -->
 						<script src="http://fast.wistia.com/embed/medias/cecdwaq3dz.jsonp"
 							async></script>
@@ -339,18 +334,21 @@
 			
 			<!-- Guarantee  -->
 			<section class="product-box-bordered-green mt-2">
-				<h2 class="h3 text-center text-orange">Stronger Bones for 7 Years Guarantee</h2>
-				<img alt="Algaecal" class="mx-auto d-block"
-					src="assets/images/Vector Smart Object copy 5.png"> When you
-				follow directions for use of AlgaeCal Plus and Strontium Boost - we
-				guarantee you will see increased bone density in EVERY follow-up DXA
-				scan you have while using these 2 products - or we will refund every
-				penny you paid for our products between your scans. This guarantee
-				extends to every scan you have for the next 7 years. Also, if you
-				are unsatisfied at anytime you can return my product for a full
-				refund, no questions asked! <a href="#" id="click-guaranteed">Click
-					Here for Details</a> <img alt="Algaecal" class="mx-auto d-block"
-					src="assets/images/dan-neals-sig.png">
+				<div>
+				<img alt="Algaecal" class="mx-auto d-block pb-3"
+						src="assets/images/Vector Smart Object copy 5.png">
+					<h2 class="h3 text-center text-orange">Stronger Bones for 7 Years Guarantee</h2>
+					 When you
+					follow directions for use of AlgaeCal Plus and Strontium Boost - we
+					guarantee you will see increased bone density in EVERY follow-up DXA
+					scan you have while using these 2 products - or we will refund every
+					penny you paid for our products between your scans. This guarantee
+					extends to every scan you have for the next 7 years. Also, if you
+					are unsatisfied at anytime you can return my product for a full
+					refund, no questions asked! <a href="#" id="click-guaranteed">Click
+						Here for Details</a> <img alt="Algaecal" class="mx-auto d-block"
+						src="assets/images/dan-neals-sig.png">
+				</div>
 			</section>
 			<!-- End Guarantee  -->
 			
@@ -376,6 +374,7 @@
 					<div class="col-6 pl-0 text-left">
 						<div class="row  m-0 p-0">
 							<div class="col-4 ml-0 pl-0">
+
 								<img alt="Algaecal" class="img-fluid "
 									src="assets/images/fy book.png">
 							</div>
@@ -474,16 +473,25 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+
+
+
+
+			
 		    $.ajax({
 		        url: "https://www.algaecal.com/wp-json/acf/v3/options/options"
 		    }).then(function(data) {
 		    	console.log(data.acf.default_phone_number);
 		    	$('.click-to-call').html(data.acf.default_phone_number);
-		    	$('.click-to-call').prop('href', data.acf.default_phone_number);		    	
+		    	$('.click-to-call').prop('href', data.acf.default_phone_number);
+				if(is_open_hours()){
+					$('#speak-bone-specialist').removeClass('d-none');
+				}
+			
 		    	
 		    	/* Please do not start  object properties with a number */
 		    	$('.modal-body').html(data.acf['7yr_full_copy']);		    	
-		    	//console.log(data.acf);	
+		    	console.log(data.acf);	
 		    });
 		    
 		    /* Guaranteed modal */
@@ -523,5 +531,40 @@
 				});			
 			};		    
 		});
+		function is_open_hours(){
+			//Monday–Friday: 7:00am to 4:00pm (PST)
+			//Saturday: 8:00am to 4:00pm (PST)
+			//Sunday: 8:00am to 2:00pm (PST) 
+			var offset = new Date().getTimezoneOffset() / 60;
+			var now = new Date();
+			var h = now.getHours();
+			var m = now.getMinutes();
+			var s = now.getSeconds();
+			var dw = now.getDay();	
+			var pst = 7;
+
+			var gmtLocal = Math.floor(parseInt(h) + parseInt(offset));
+			console.log('gmtt local'+gmtLocal);
+			if(dw >= 1 && dw <= 5){
+				var gmt7pstOpen = Math.floor(7 + pst);
+				var gmt7pstClose = Math.floor(16 + pst);
+				if(gmtLocal >= gmt7pstOpen &&  gmtLocal <=  gmt7pstClose ){
+					return true;
+				}
+			} else if(dw == 6){ 
+				var gmt7pstOpen = Math.floor(8 + pst);
+				var gmt7pstClose = Math.floor(16 + pst);
+				if(gmtLocal >= gmt7pstOpen &&  gmtLocal <=  gmt7pstClose ){
+					return true;
+				}
+			} else {
+				var gmt7pstOpen = Math.floor(8 + pst);
+				var gmt7pstClose = Math.floor(14 + pst);
+				if(gmtLocal >= gmt7pstOpen &&  gmtLocal <=  gmt7pstClose ){
+					return true;	
+				}
+			}
+			return false;
+		}
 	</script>	
 </body>
