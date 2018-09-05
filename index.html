@@ -356,16 +356,16 @@
 			<section class="mt-2">
 				<h2 class="bg-green w-100 text-center">As Seen On</h2>
 				<div class="row  m-0 p-0">
-					<div class="col-3 pl-0 pr-4">
+					<div class="col-3 ">
 						<img alt="Algaecal" class="img-fluid" src="assets/images/oz.png">
 					</div>
-					<div class="col-3 pl-2 pr-2">
+					<div class="col-3 ">
 						<img alt="Algaecal" class="img-fluid" src="assets/images/fox.png">
 					</div>
-					<div class="col-3 pl-0 pr-4">
+					<div class="col-3 ">
 						<img alt="Algaecal" class="img-fluid" src="assets/images/pbs.png">
 					</div>
-					<div class="col-3 p-0 text-right">
+					<div class="col-3 text-right">
 						<img alt="Algaecal" class="img-fluid" src="assets/images/amz.png">
 					</div>
 				</div>
@@ -485,7 +485,7 @@
 		    	$('.click-to-call').html(data.acf.default_phone_number);
 		    	$('.click-to-call').prop('href', data.acf.default_phone_number);
 				if(is_open_hours()){
-					$('#speak-bone-specialist').removeClass('d-none');
+					$('.speak-bone-specialist').removeClass('d-none');
 				}
 			
 		    	
@@ -544,12 +544,16 @@
 			var pst = 7;
 
 			var gmtLocal = Math.floor(parseInt(h) + parseInt(offset));
-			console.log('gmtt local'+gmtLocal);
+		//	console.log('gmtt local'+gmtLocal);
 			if(dw >= 1 && dw <= 5){
+			console.log('day'+dw);
 				var gmt7pstOpen = Math.floor(7 + pst);
 				var gmt7pstClose = Math.floor(16 + pst);
+				console.log('gmt'+gmtLocal);
+				console.log('gmt'+gmt7pstOpen);
 				if(gmtLocal >= gmt7pstOpen &&  gmtLocal <=  gmt7pstClose ){
 					return true;
+					
 				}
 			} else if(dw == 6){ 
 				var gmt7pstOpen = Math.floor(8 + pst);
